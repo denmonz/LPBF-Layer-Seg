@@ -244,7 +244,6 @@ if __name__ == "__main__":
     # Load configuration parameters
     binary = config.BINARY_CLASSIFICATION
 
-    # Point directly to your true local path directory shown in your terminal output
     lpbf_files = [
         "D:/Data/Peregrine/Peregrine Dataset v2025-09/Concept Laser M2 Builds/2025-05-09 M2 Anomaly Detection Print 01.hdf5",
         "D:/Data/Peregrine/Peregrine Dataset v2025-09/Concept Laser M2 Builds/2025-05-13 M2 Stripe Rotation Print 01.hdf5",
