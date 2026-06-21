@@ -26,7 +26,9 @@ The following is a break-down of my system configuration:
 Peregrine/                          <--- DATABASE_BASE_DIR
 ├── Peregrine Dataset v2021-03/
 ├── Peregrine Dataset v2022-10.1/
-├── Peregrine Dataset v2025-09 /   
+├── Peregrine Dataset v2025-09/
+├── Peregrine Dataset v2025-09/
+└── Unified_Unet_Dataset/           <--- Automatically created
 ```
 
 3. Download the model weights from [here], and place in `models/UNet/checkpoints/`.
@@ -35,6 +37,22 @@ Peregrine/                          <--- DATABASE_BASE_DIR
 Configure the parameters of the repository, found within the `configs/config.py` file, such as:
 1. NUM_WORKERS: Should be set to the number of cores available on your CPU
 2. DATASET_BASE_DIR: The full path to the root `Peregrine` folder, set in the previous section.
+
+### Train/Val/Test Dataset Split
+1. With the above configured, run the following command to standardize and combine the three datasets into a `Unified_Unet_Dataset` folder:
+`uv run python setup.py`.
+
+## Functionality
+With the above configured, you can perform the following:
+
+### Training
+To train your own model on the data, run the following: `uv run python train.py`
+
+### Testing
+To test on the held-out testing data, run the following: `uv run python test_suite_analysis.py`
+
+### Inference
+To conduct your own inference on your own data, run the following: `uv run python inference.py`
 
 ## Overview and Analysis Files
 For more metadata information, review the following writeups:
