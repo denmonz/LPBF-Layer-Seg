@@ -46,7 +46,7 @@ standardized_class_dict_2025 = {
     "Super-Elevation": 7,
     "Swelling": 5,
     "Spatter on Powder": 10,
-    "Condensate": 18,
+    "Condensate": 17,
     "Localized Bright Spot": 11
 }
 
@@ -58,7 +58,7 @@ non_represented_classes = [
 
 binary_class_dict = {
     0: [0], # "No Defect"
-    1: [3, 4, 5, 7, 9, 10, 11, 13] # "Defect"
+    1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] # "Defect"
 }
 
 """
