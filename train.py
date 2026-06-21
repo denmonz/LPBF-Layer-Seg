@@ -71,7 +71,7 @@ def plot_training_diagnostics(history):
     plt.show()
 
 # ==========================================
-# 1. ARCHITECTURE & LOG-LOG DICE LOSS
+# 1. ARCHITECTURE & LOSS
 # ==========================================
 def get_unet_efficientnet(encoder_name="efficientnet-b3", pretrained="imagenet"):
     """Creates a U-Net++ architecture with an EfficientNet encoder for 1-channel grayscale input."""
@@ -325,7 +325,9 @@ def main():
     print(f"\n--- Launching Two-Phase Execution Loop for {ENCODER_BACKBONE} ---")
 
     for epoch in range(1, EPOCHS + 1):
-        # PHASE 2 TRIGGER: Unfreeze encoder at Epoch 11
+        # ----------------------------------------------------
+        # PHASE 2: UNFREEZE ENCODER (Epochs 11+)
+        # ----------------------------------------------------
         if epoch == 11 and not encoder_unfrozen:
             print("\n>>> PHASE 2: Unfreezing encoder weights for gentle joint fine-tuning... <<<")
             for param in model.encoder.parameters():

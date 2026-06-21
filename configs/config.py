@@ -28,7 +28,7 @@ UNET_DATASET_DIR = f"{DATASET_BASE_DIR}/Unified_Unet_Dataset"
 CHECKPOINT_DIR = "./models/UNet/checkpoints"
 CHECKPOINT_FILE = f"{CHECKPOINT_DIR}/best_unetplusplus_efficientnet-b3.pth"
 
-# Inference Parameters
+# Test & Inference Parameters
 TEST_IMAGE_DIR = f"{UNET_DATASET_DIR}/test"
 OUTPUT_DIR = f"{UNET_DATASET_DIR}/output"
 ANALYSIS_REPORT = f"{UNET_DATASET_DIR}/analysis_report"
