@@ -275,7 +275,7 @@ def main():
     """
     Load configuration parameters
     """
-    device = torch.device(config.DEVICE)
+    device = config.DEVICE
     print(f"Initializing optimization environment on: {device}")
     if torch.cuda.is_available():
         print(f"Target Hardware Identified: {torch.cuda.get_device_name(0)}")

@@ -2,7 +2,7 @@ import os
 import torch
 
 # Hardware Settings
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 PIN_MEMORY = True          # True allows fast asynchronous GPU memory transfers
 NUM_WORKERS = 8            # Number of CPU cores assigned to fetch data (tweak based on CPU)
 

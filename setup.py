@@ -30,6 +30,7 @@ def main():
     ]
     build_partitioned_unet_dataset(dataset_configs, UNET_DATASET_DIR, binary=BINARY_CLASSIFICATION)
 
+    # Next, the v2025-09 dataset, which is different from the previous two and requires its own separate setup script
     print("\tStandardizing the v2025-09 dataset...")
     lpbf_files = [
         "D:/Data/Peregrine/Peregrine Dataset v2025-09/Concept Laser M2 Builds/2025-05-09 M2 Anomaly Detection Print 01.hdf5",
