@@ -63,3 +63,12 @@ for multiclass data, 0 = background / no defect, and >0 is the actual class valu
 `Concept Laser M2 Builds > 2025-05-13 M2 Stripe Rotation Print 01.hdf5`
 
 `Concept Laser M2 Builds > 2025-06-11 M2 Globe.hdf5`
+
+## General Notes
+- There are **many** differences between Class IDs between each dataset, and within the datasets builds themselves, which 
+required standardization across all builds.
+- Some classes are not represented in the data at all, and are noted in the individual `*_metadata.py` files.
+- The `Peregrine Dataset v2021-03` and `Peregrine Dataset v2022-10.1` datasets have a small number of images that contained 
+a **dense** amount of annotations per image.
+- The `Peregrine Dataset v2025-09` has an entirely different structure than the previous two datasets, and required its 
+own specific means of data extraction.
