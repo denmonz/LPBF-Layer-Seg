@@ -1,4 +1,35 @@
 # Dataset Overview
+The data used for model training, validation, and testing are the Laser Powder Bed Fusion builds within the three datasets. 
+I utilized the visible imagery ('0'), which are single-channel .tif images. The annotations generated are .png files, where 
+each pixel represents the class associated with that pixel (for binary data, 0 = background / no defect, and 1 = defect, 
+for multiclass data, 0 = background / no defect, and >0 is the actual class value [1-18]).
+
+## Classes
+| Class Id | Class Name             |
+|:---------|:-----------------------|
+| 0        | Unlabeled              |
+| 0        | Powder                 |
+| 0        | Printed Mesh           |
+| 0        | Misprint               |
+| 1        | Recoaster Hopping      |
+| 2        | Recoater Streaking     |
+| 3        | Incomplete Spreading   |
+| 4        | Edge Swelling          |
+| 5        | Debris                 |
+| 6        | Super Elevation        |
+| 7        | Soot                   |
+| 8        | Excessive Melting      |
+| 8        | Over Melting           |
+| 9        | Spatter                |
+| 10       | Localized Bright Spot  |
+| 11       | Localized Dark Region  |
+| 12       | Stripe Boundary        |
+| 13       | Under Melting          |
+| 14       | Recoater Flicking      |
+| 15       | Disturbed Powder       |
+| 16       | Recoater Strike Damage |
+| 17       | Condensate             |
+
 ## Peregrine Dataset v2021-03
 ### Builds
 **Train (80%) / Val (20%) Data:**
