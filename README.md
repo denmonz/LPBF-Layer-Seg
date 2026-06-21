@@ -10,6 +10,7 @@
 The following is a break-down of my system configuration:
 - CPU: AMD Ryzen 7 5800X 8-Core Processor
 - GPU: NVIDIA GeForce RTX 3090 w/ 24GB VRAM
+- RAM: 128GB DDR4
 
 ## Setup Instructions
 ### uv Package Manager
@@ -27,7 +28,6 @@ Peregrine/                          <--- DATABASE_BASE_DIR
 ├── Peregrine Dataset v2021-03/
 ├── Peregrine Dataset v2022-10.1/
 ├── Peregrine Dataset v2025-09/
-├── Peregrine Dataset v2025-09/
 └── Unified_Unet_Dataset/           <--- Automatically created
 ```
 
@@ -35,32 +35,37 @@ Peregrine/                          <--- DATABASE_BASE_DIR
 
 ### Configuration Setup
 Configure the parameters of the repository, found within the `configs/config.py` file, such as:
-1. NUM_WORKERS: Should be set to the number of cores available on your CPU
+1. NUM_WORKERS: Should be set to the number of cores available on your CPU.
 2. DATASET_BASE_DIR: The full path to the root `Peregrine` folder, set in the previous section.
 
-### Train/Val/Test Dataset Split
-1. With the above configured, run the following command to standardize and combine the three datasets into a `Unified_Unet_Dataset` folder:
-`uv run python setup.py`.
+### Dataset Standardization and Train/Val/Test Split
+With the above configured, run the following command to standardize and combine the three datasets into a `Unified_Unet_Dataset` folder:
+
+`uv run python setup.py`
 
 ## Functionality
-With the above configured, you can perform the following:
+With the above configured, you can perform the following functionalities.
 
 ### Training
-To train your own model on the data, run the following: `uv run python train.py`
+To train your own model on the data, run the following: 
+
+`uv run python train.py`
 
 ### Testing
-To test on the held-out testing data, run the following: `uv run python test_suite_analysis.py`
+To test on the held-out testing data using the trained model, run the following: 
+
+`uv run python test_suite_analysis.py`
 
 ### Inference
-To conduct your own inference on your own data, run the following: `uv run python inference.py`
+To conduct inference on your own data using the trained model, run the following: 
+
+`uv run python inference.py`
 
 ## Overview and Analysis Files
-For more metadata information, review the following writeups:
-- `data/Dataset_Overview.md`
-- `models/UNet/Model_Overview.md`
-
-## Evaluation
-The model was trained for 100 epochs
+For more metadata information, review the following write-ups:
+- [Dataset Overview](data/Dataset_Overview.md)
+- [Model Overview](models/UNet/Model_Overview.md)
+- [Fine-Tuned Model Evaluation](models/UNet/checkpoints/Best_100_epochs/Model_Evaluation.md)
 
 ## TODO Checklist
 In future iterations, I plan to develop the following capabilities and features:
@@ -68,4 +73,4 @@ In future iterations, I plan to develop the following capabilities and features:
   - [ ] ONNX
   - [ ] TensorRT
 - [ ] Compare performance metrics against larger pre-trained EfficientNet Encoders
-- [ ] Quantify epistemic uncertainty (model confidence) by integrating Mote Carlo (MC) dropout as a toggle for inference
+- [ ] Quantify epistemic uncertainty (model confidence) by integrating Mote Carlo (MC) dropout as a toggle for testing and inference
