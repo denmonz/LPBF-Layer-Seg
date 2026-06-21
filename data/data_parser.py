@@ -10,7 +10,6 @@ from data.peregrine2022_metadata import class_dict_2022, standardized_class_dict
 from configs import config
 
 
-# --- KEEPING YOUR ORIGINAL UTILITY FUNCTIONS UNCHANGED ---
 def visualize_standardized_mask(mask: np.ndarray):
     color_map = {
         -1: [0.2, 0.2, 0.2], 0: [0.9, 0.9, 0.9], 1: [0.7, 0.9, 0.7],
@@ -116,152 +115,13 @@ def mask_to_unet_segmentation(mask_path, output_png_path, binary=False, visualiz
             visualize_standardized_mask(mapped_mask)
     else:
         # For Multi-class U-Net, shift unlabeled (-1) to a safe unsigned integer (0 or 255)
-        # based on your loss configuration. Here we preserve absolute Class IDs.
+        # based on loss configuration. Here we preserve absolute Class IDs.
         mapped_mask = np.where(standardized_mask == -1, 0, standardized_mask).astype(np.uint8)
 
     # Save the 2D matrix directly as a 1-channel grayscale image
     cv2.imwrite(str(output_png_path), mapped_mask)
 
     return standardized_instance_counts, binary_instance_counts
-
-
-# --- MODIFIED BULK DATASET BUILDER ---
-# def build_unet_dataset(source_root_dir, unet_output_dir, binary, visualize):
-#     """Parses your hierarchy, outputs unique TIF images and corresponding PNG masks."""
-#     total_original_instances_count_dict = {
-#         "powder": 0, "printed": 0, "recoater_hopping": 0, "recoater_streaking": 0,
-#         "incomplete_spreading": 0, "edge_swelling": 0, "debris": 0, "super_elevation": 0,
-#         "soot": 0, "excessive_melting": 0, "spatter": 0, "localized_bright_spot": 0,
-#         "localized_dark_regions": 0, "stripe_boundary": 0
-#     }
-#     total_binary_instances_count_dict = {"no_defect": 0, "defect": 0}
-#
-#     source_root = Path(source_root_dir)
-#     unet_root = Path(unet_output_dir)
-#
-#     # Structural directories for Semantic Segmentation pipelines
-#     unet_images_dir = unet_root / "images"
-#     unet_masks_dir = unet_root / "masks"
-#     unet_images_dir.mkdir(parents=True, exist_ok=True)
-#     unet_masks_dir.mkdir(parents=True, exist_ok=True)
-#
-#     annotation_folders = list(source_root.glob("**/training/annotations"))
-#     print(f"Found {len(annotation_folders)} training sets to process.")
-#
-#     for ann_folder in annotation_folders:
-#         printer_name = ann_folder.parent.parent.parent.name
-#         material_name = ann_folder.parent.parent.name
-#         print(f"\nProcessing: {printer_name}/{material_name}")
-#
-#         prefix = f"{printer_name}_{material_name}"
-#         img_folder = ann_folder.parent / "data" / "visible" / "0"
-#
-#         if not img_folder.exists():
-#             print(f"Warning: Image folder missing for {prefix}, skipping...")
-#             continue
-#
-#         npy_files = list(ann_folder.glob("*.npy"))
-#         for npy_path in npy_files:
-#             file_id = npy_path.stem
-#             tif_path = img_folder / f"{file_id}.tif"
-#
-#             if not tif_path.exists():
-#                 print(f"Missing source image: {tif_path}")
-#                 continue
-#
-#             unique_base_name = f"{prefix}_{file_id}"
-#             unique_png_mask_name = f"{unique_base_name}.png"  # Masks saved as 2D Images
-#             unique_tif_img_name = f"{unique_base_name}.tif"
-#
-#             dest_mask_path = unet_masks_dir / unique_png_mask_name
-#             dest_tif_path = unet_images_dir / unique_tif_img_name
-#
-#             # 1. Convert .npy arrays directly to target 2D .png masks
-#             original_instance_counts, binary_instance_counts = mask_to_unet_segmentation(
-#                 npy_path, dest_mask_path, binary, visualize
-#             )
-#
-#             # 2. Copy over original raw images
-#             shutil.copy2(tif_path, dest_tif_path)
-#
-#             # Accumulate logs
-#             for k, v in original_instance_counts.items():
-#                 if k in total_original_instances_count_dict:
-#                     total_original_instances_count_dict[k] += v
-#             if binary and binary_instance_counts:
-#                 for k, v in binary_instance_counts.items():
-#                     total_binary_instances_count_dict[k] += v
-#
-#     print("\nTotal multi-class instances dictionary count:")
-#     pprint.pprint(total_original_instances_count_dict, indent=4)
-#     if binary:
-#         print("\nTotal binary instances dictionary count:")
-#         pprint.pprint(total_binary_instances_count_dict, indent=4)
-#
-#     print(f"U-Net Dataset built successfully at: {unet_root.resolve()}")
-#     return
-
-
-# def build_partitioned_unet_dataset(source_root_dir, unet_output_dir, binary=True, visualize=False):
-#     """
-#     Parses your file hierarchy and structural paths, separating distinct materials
-#     into Train, Val, and Test folders to guarantee zero data leakage.
-#     """
-#     source_root = Path(source_root_dir)
-#     unet_root = Path(unet_output_dir)
-#
-#     # Define your split definitions
-#     # Maraging Steel and one of the Inconel builds are reserved strictly for the test bench
-#     test_groups = ["Maraging_Steel", "Inconel_718_2"]
-#
-#     # Create the structured folder tree
-#     for split in ["train", "val", "test"]:
-#         (unet_root / split / "images").mkdir(parents=True, exist_ok=True)
-#         (unet_root / split / "masks").mkdir(parents=True, exist_ok=True)
-#
-#     annotation_folders = list(source_root.glob("**/training/annotations"))
-#
-#     for ann_folder in annotation_folders:
-#         printer_name = ann_folder.parent.parent.parent.name
-#         material_name = ann_folder.parent.parent.name
-#         prefix = f"{printer_name}_{material_name}"
-#         img_folder = ann_folder.parent / "data" / "visible" / "0"
-#
-#         if not img_folder.exists():
-#             continue
-#
-#         npy_files = sorted(list(ann_folder.glob("*.npy")))
-#         total_files = len(npy_files)
-#
-#         # 1. Determine Split Bucket assignment
-#         if material_name in test_groups:
-#             target_split = "test"
-#             file_assignments = [(f, "test") for f in npy_files]
-#             print(f"Routing {prefix} ({total_files} slices) -> HELD OUT FOR TEST DATA")
-#         else:
-#             # Dynamically split remaining materials 80% train / 20% val by layer slice index
-#             split_idx = int(0.8 * total_files)
-#             file_assignments = [(f, "train") for f in npy_files[:split_idx]] + \
-#                                [(f, "val") for f in npy_files[split_idx:]]
-#             print(f"Routing {prefix} -> Split into: {split_idx} Train | {total_files - split_idx} Val")
-#
-#         # 2. Convert and distribute the files
-#         for npy_path, split_name in file_assignments:
-#             file_id = npy_path.stem
-#             tif_path = img_folder / f"{file_id}.tif"
-#             if not tif_path.exists():
-#                 continue
-#
-#             unique_name = f"{prefix}_{file_id}"
-#
-#             dest_mask = unet_root / split_name / "masks" / f"{unique_name}.png"
-#             dest_image = unet_root / split_name / "images" / f"{unique_name}.tif"
-#
-#             # Run your existing mask transformation matrix conversion function
-#             mask_to_unet_segmentation(npy_path, dest_mask, binary, visualize)
-#             shutil.copy2(tif_path, dest_image)
-#
-#     print(f"\nSuccessfully built partitioned U-Net folder tree at: {unet_root.resolve()}")
 
 def build_partitioned_unet_dataset(dataset_configs, unet_output_dir, binary=True, visualize=False):
     """
@@ -373,7 +233,7 @@ def build_partitioned_unet_dataset(dataset_configs, unet_output_dir, binary=True
                 dest_mask = unet_root / split_name / "masks" / f"{unique_name}.png"
                 dest_image = unet_root / split_name / "images" / f"{unique_name}.tif"
 
-                # Execute your metadata standardization logic and matrix write transformations
+                # Execute metadata standardization logic and matrix write transformations
                 standardized_instance_counts, binary_instance_counts = mask_to_unet_segmentation(npy_path, dest_mask, binary, visualize)
                 shutil.copy2(tif_path, dest_image)
 
@@ -416,7 +276,7 @@ def main():
     ]
 
     # Destination directory where train/val/test folders will be generated
-    unet_output_dir = f"{dataset_base_dir}/Unified_Unet_Dataset"
+    unet_output_dir = config.UNET_DATASET_DIR
 
     build_partitioned_unet_dataset(dataset_configs, unet_output_dir, binary, visualize)
 
