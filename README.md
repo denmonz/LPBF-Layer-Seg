@@ -1,5 +1,5 @@
 # PBF-Layer-Seg
-Laser Powder Bed Fusion Layer Instance Segmentation for Anomaly / Defect Identification
+**Laser Powder Bed Fusion Layer Instance Segmentation for Anomaly / Defect Identification**
 
 ## Requirements
 - [Python v3.12.10](https://www.python.org/downloads/release/python-31210/)
@@ -60,3 +60,12 @@ For more metadata information, review the following writeups:
 - `models/UNet/Model_Overview.md`
 
 ## Evaluation
+The model was trained for 100 epochs
+
+## TODO Checklist
+In future iterations, I plan to develop the following capabilities and features:
+- [ ] Automatically export trained weights to the following to speed-up inference:
+  - [ ] ONNX
+  - [ ] TensorRT
+- [ ] Compare performance metrics against larger pre-trained EfficientNet Encoders
+- [ ] Quantify epistemic uncertainty (model confidence) by integrating Mote Carlo (MC) dropout as a toggle for inference
