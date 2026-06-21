@@ -1,0 +1,532 @@
+Initializing optimization environment on: cuda
+Target Hardware Identified: NVIDIA GeForce RTX 3090
+Binding datasets to parallel memory pipelines...
+Freezing pre-trained encoder weights for Phase 1 structural regularization...
+
+--- Launching Two-Phase Execution Loop for efficientnet-b3 ---
+
+=================== EPOCH 01/100 ===================
+Losses -> Train: 0.6555 | Val: 0.8796 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.4073 | Rec: 0.0043 | F1: 0.0085
+Metrics (At 0.25 Threshold) -> Prec: 0.2227 | Rec: 0.0736 | F1: 0.1106
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 02/100 ===================
+Losses -> Train: 0.5751 | Val: 0.9076 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.7938 | Rec: 0.1363 | F1: 0.2326
+Metrics (At 0.25 Threshold) -> Prec: 0.5701 | Rec: 0.2354 | F1: 0.3332
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 03/100 ===================
+Losses -> Train: 0.5063 | Val: 0.7610 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.7957 | Rec: 0.2058 | F1: 0.3271
+Metrics (At 0.25 Threshold) -> Prec: 0.6782 | Rec: 0.2853 | F1: 0.4016
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 04/100 ===================
+Losses -> Train: 0.5298 | Val: 0.6764 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.7341 | Rec: 0.2291 | F1: 0.3492
+Metrics (At 0.25 Threshold) -> Prec: 0.6050 | Rec: 0.3570 | F1: 0.4490
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 05/100 ===================
+Losses -> Train: 0.5203 | Val: 0.6405 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.6874 | Rec: 0.1820 | F1: 0.2878
+Metrics (At 0.25 Threshold) -> Prec: 0.6071 | Rec: 0.3528 | F1: 0.4463
+
+=================== EPOCH 06/100 ===================
+Losses -> Train: 0.5289 | Val: 0.7064 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.6098 | Rec: 0.2413 | F1: 0.3458
+Metrics (At 0.25 Threshold) -> Prec: 0.5304 | Rec: 0.3555 | F1: 0.4257
+
+=================== EPOCH 07/100 ===================
+Losses -> Train: 0.5236 | Val: 0.6056 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.5525 | Rec: 0.3672 | F1: 0.4412
+Metrics (At 0.25 Threshold) -> Prec: 0.4234 | Rec: 0.4604 | F1: 0.4411
+
+=================== EPOCH 08/100 ===================
+Losses -> Train: 0.4953 | Val: 0.7101 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.6297 | Rec: 0.2771 | F1: 0.3848
+Metrics (At 0.25 Threshold) -> Prec: 0.5456 | Rec: 0.3542 | F1: 0.4295
+
+=================== EPOCH 09/100 ===================
+Losses -> Train: 0.5059 | Val: 0.5653 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.6627 | Rec: 0.3561 | F1: 0.4633
+Metrics (At 0.25 Threshold) -> Prec: 0.5840 | Rec: 0.4588 | F1: 0.5139
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 10/100 ===================
+Losses -> Train: 0.4943 | Val: 0.4734 | LR: 0.0003000
+Metrics (At 0.50 Threshold) -> Prec: 0.5618 | Rec: 0.4896 | F1: 0.5232
+Metrics (At 0.25 Threshold) -> Prec: 0.5201 | Rec: 0.5629 | F1: 0.5407
+ => Saved new optimum sensitive checkpoint.
+
+>>> PHASE 2: Unfreezing encoder weights for gentle joint fine-tuning... <<<
+
+=================== EPOCH 11/100 ===================
+Losses -> Train: 0.4824 | Val: 0.4198 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6184 | Rec: 0.5464 | F1: 0.5802
+Metrics (At 0.25 Threshold) -> Prec: 0.5741 | Rec: 0.6397 | F1: 0.6051
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 12/100 ===================
+Losses -> Train: 0.4785 | Val: 0.3788 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6366 | Rec: 0.6247 | F1: 0.6306
+Metrics (At 0.25 Threshold) -> Prec: 0.5934 | Rec: 0.7195 | F1: 0.6504
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 13/100 ===================
+Losses -> Train: 0.4980 | Val: 0.3641 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6333 | Rec: 0.6789 | F1: 0.6554
+Metrics (At 0.25 Threshold) -> Prec: 0.5856 | Rec: 0.7840 | F1: 0.6704
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 14/100 ===================
+Losses -> Train: 0.4602 | Val: 0.3485 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6774 | Rec: 0.6723 | F1: 0.6748
+Metrics (At 0.25 Threshold) -> Prec: 0.6236 | Rec: 0.7853 | F1: 0.6951
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 15/100 ===================
+Losses -> Train: 0.4402 | Val: 0.3334 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6744 | Rec: 0.7244 | F1: 0.6985
+Metrics (At 0.25 Threshold) -> Prec: 0.6222 | Rec: 0.8267 | F1: 0.7101
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 16/100 ===================
+Losses -> Train: 0.5193 | Val: 0.3297 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6501 | Rec: 0.7749 | F1: 0.7070
+Metrics (At 0.25 Threshold) -> Prec: 0.6012 | Rec: 0.8572 | F1: 0.7067
+
+=================== EPOCH 17/100 ===================
+Losses -> Train: 0.4491 | Val: 0.3338 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6576 | Rec: 0.7396 | F1: 0.6962
+Metrics (At 0.25 Threshold) -> Prec: 0.6144 | Rec: 0.8303 | F1: 0.7062
+
+=================== EPOCH 18/100 ===================
+Losses -> Train: 0.4737 | Val: 0.3300 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6649 | Rec: 0.7361 | F1: 0.6987
+Metrics (At 0.25 Threshold) -> Prec: 0.6203 | Rec: 0.8289 | F1: 0.7096
+
+=================== EPOCH 19/100 ===================
+Losses -> Train: 0.4560 | Val: 0.3195 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6710 | Rec: 0.7744 | F1: 0.7190
+Metrics (At 0.25 Threshold) -> Prec: 0.6247 | Rec: 0.8587 | F1: 0.7233
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 20/100 ===================
+Losses -> Train: 0.4390 | Val: 0.3149 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6661 | Rec: 0.8057 | F1: 0.7293
+Metrics (At 0.25 Threshold) -> Prec: 0.6155 | Rec: 0.8804 | F1: 0.7245
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 21/100 ===================
+Losses -> Train: 0.4669 | Val: 0.3186 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6573 | Rec: 0.8105 | F1: 0.7259
+Metrics (At 0.25 Threshold) -> Prec: 0.6079 | Rec: 0.8821 | F1: 0.7198
+
+=================== EPOCH 22/100 ===================
+Losses -> Train: 0.4526 | Val: 0.3147 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6611 | Rec: 0.8153 | F1: 0.7301
+Metrics (At 0.25 Threshold) -> Prec: 0.6096 | Rec: 0.8860 | F1: 0.7223
+
+=================== EPOCH 23/100 ===================
+Losses -> Train: 0.4440 | Val: 0.3101 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7009 | Rec: 0.7407 | F1: 0.7203
+Metrics (At 0.25 Threshold) -> Prec: 0.6503 | Rec: 0.8385 | F1: 0.7325
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 24/100 ===================
+Losses -> Train: 0.4556 | Val: 0.3109 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7094 | Rec: 0.7283 | F1: 0.7187
+Metrics (At 0.25 Threshold) -> Prec: 0.6593 | Rec: 0.8324 | F1: 0.7358
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 25/100 ===================
+Losses -> Train: 0.4598 | Val: 0.3051 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6821 | Rec: 0.8131 | F1: 0.7419
+Metrics (At 0.25 Threshold) -> Prec: 0.6300 | Rec: 0.8839 | F1: 0.7357
+
+=================== EPOCH 26/100 ===================
+Losses -> Train: 0.4472 | Val: 0.3001 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6858 | Rec: 0.8178 | F1: 0.7460
+Metrics (At 0.25 Threshold) -> Prec: 0.6343 | Rec: 0.8841 | F1: 0.7387
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 27/100 ===================
+Losses -> Train: 0.4523 | Val: 0.3015 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7177 | Rec: 0.7672 | F1: 0.7417
+Metrics (At 0.25 Threshold) -> Prec: 0.6672 | Rec: 0.8489 | F1: 0.7472
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 28/100 ===================
+Losses -> Train: 0.4387 | Val: 0.2983 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7008 | Rec: 0.8102 | F1: 0.7516
+Metrics (At 0.25 Threshold) -> Prec: 0.6499 | Rec: 0.8779 | F1: 0.7469
+
+=================== EPOCH 29/100 ===================
+Losses -> Train: 0.4334 | Val: 0.2938 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6932 | Rec: 0.8393 | F1: 0.7593
+Metrics (At 0.25 Threshold) -> Prec: 0.6430 | Rec: 0.8909 | F1: 0.7469
+
+=================== EPOCH 30/100 ===================
+Losses -> Train: 0.4166 | Val: 0.3011 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7024 | Rec: 0.8286 | F1: 0.7603
+Metrics (At 0.25 Threshold) -> Prec: 0.6572 | Rec: 0.8804 | F1: 0.7526
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 31/100 ===================
+Losses -> Train: 0.4389 | Val: 0.2998 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6899 | Rec: 0.8429 | F1: 0.7588
+Metrics (At 0.25 Threshold) -> Prec: 0.6357 | Rec: 0.8966 | F1: 0.7440
+
+=================== EPOCH 32/100 ===================
+Losses -> Train: 0.4382 | Val: 0.2949 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6826 | Rec: 0.8521 | F1: 0.7580
+Metrics (At 0.25 Threshold) -> Prec: 0.6309 | Rec: 0.9003 | F1: 0.7419
+
+=================== EPOCH 33/100 ===================
+Losses -> Train: 0.4276 | Val: 0.2966 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6755 | Rec: 0.8616 | F1: 0.7573
+Metrics (At 0.25 Threshold) -> Prec: 0.6260 | Rec: 0.9038 | F1: 0.7397
+
+=================== EPOCH 34/100 ===================
+Losses -> Train: 0.4321 | Val: 0.2975 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6791 | Rec: 0.8563 | F1: 0.7575
+Metrics (At 0.25 Threshold) -> Prec: 0.6311 | Rec: 0.9001 | F1: 0.7419
+
+=================== EPOCH 35/100 ===================
+Losses -> Train: 0.4354 | Val: 0.2945 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6986 | Rec: 0.8307 | F1: 0.7589
+Metrics (At 0.25 Threshold) -> Prec: 0.6455 | Rec: 0.8894 | F1: 0.7481
+
+=================== EPOCH 36/100 ===================
+Losses -> Train: 0.4245 | Val: 0.2975 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6861 | Rec: 0.8533 | F1: 0.7606
+Metrics (At 0.25 Threshold) -> Prec: 0.6371 | Rec: 0.8964 | F1: 0.7448
+
+=================== EPOCH 37/100 ===================
+Losses -> Train: 0.4247 | Val: 0.2955 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6798 | Rec: 0.8648 | F1: 0.7612
+Metrics (At 0.25 Threshold) -> Prec: 0.6336 | Rec: 0.9010 | F1: 0.7440
+
+=================== EPOCH 38/100 ===================
+Losses -> Train: 0.4373 | Val: 0.2884 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6883 | Rec: 0.8584 | F1: 0.7640
+Metrics (At 0.25 Threshold) -> Prec: 0.6408 | Rec: 0.8981 | F1: 0.7479
+
+=================== EPOCH 39/100 ===================
+Losses -> Train: 0.3980 | Val: 0.2880 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7232 | Rec: 0.8269 | F1: 0.7716
+Metrics (At 0.25 Threshold) -> Prec: 0.6722 | Rec: 0.8792 | F1: 0.7619
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 40/100 ===================
+Losses -> Train: 0.4226 | Val: 0.2959 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6825 | Rec: 0.8659 | F1: 0.7633
+Metrics (At 0.25 Threshold) -> Prec: 0.6343 | Rec: 0.9021 | F1: 0.7449
+
+=================== EPOCH 41/100 ===================
+Losses -> Train: 0.4350 | Val: 0.2926 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6872 | Rec: 0.8625 | F1: 0.7649
+Metrics (At 0.25 Threshold) -> Prec: 0.6339 | Rec: 0.9033 | F1: 0.7450
+
+=================== EPOCH 42/100 ===================
+Losses -> Train: 0.4084 | Val: 0.2971 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6770 | Rec: 0.8705 | F1: 0.7616
+Metrics (At 0.25 Threshold) -> Prec: 0.6316 | Rec: 0.9029 | F1: 0.7432
+
+=================== EPOCH 43/100 ===================
+Losses -> Train: 0.4382 | Val: 0.2996 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6899 | Rec: 0.8624 | F1: 0.7666
+Metrics (At 0.25 Threshold) -> Prec: 0.6405 | Rec: 0.8990 | F1: 0.7480
+
+=================== EPOCH 44/100 ===================
+Losses -> Train: 0.4716 | Val: 0.2910 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6955 | Rec: 0.8566 | F1: 0.7677
+Metrics (At 0.25 Threshold) -> Prec: 0.6435 | Rec: 0.8985 | F1: 0.7499
+
+=================== EPOCH 45/100 ===================
+Losses -> Train: 0.4531 | Val: 0.2833 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6970 | Rec: 0.8577 | F1: 0.7690
+Metrics (At 0.25 Threshold) -> Prec: 0.6467 | Rec: 0.8993 | F1: 0.7524
+
+=================== EPOCH 46/100 ===================
+Losses -> Train: 0.4302 | Val: 0.2812 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6995 | Rec: 0.8565 | F1: 0.7701
+Metrics (At 0.25 Threshold) -> Prec: 0.6462 | Rec: 0.8990 | F1: 0.7519
+
+=================== EPOCH 47/100 ===================
+Losses -> Train: 0.3876 | Val: 0.2798 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6982 | Rec: 0.8599 | F1: 0.7707
+Metrics (At 0.25 Threshold) -> Prec: 0.6447 | Rec: 0.9003 | F1: 0.7514
+
+=================== EPOCH 48/100 ===================
+Losses -> Train: 0.3907 | Val: 0.2843 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6918 | Rec: 0.8644 | F1: 0.7685
+Metrics (At 0.25 Threshold) -> Prec: 0.6450 | Rec: 0.8991 | F1: 0.7511
+
+=================== EPOCH 49/100 ===================
+Losses -> Train: 0.4353 | Val: 0.2841 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6994 | Rec: 0.8584 | F1: 0.7708
+Metrics (At 0.25 Threshold) -> Prec: 0.6486 | Rec: 0.8985 | F1: 0.7534
+
+=================== EPOCH 50/100 ===================
+Losses -> Train: 0.4199 | Val: 0.2782 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7038 | Rec: 0.8570 | F1: 0.7729
+Metrics (At 0.25 Threshold) -> Prec: 0.6527 | Rec: 0.8966 | F1: 0.7554
+
+=================== EPOCH 51/100 ===================
+Losses -> Train: 0.4159 | Val: 0.2772 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7066 | Rec: 0.8567 | F1: 0.7744
+Metrics (At 0.25 Threshold) -> Prec: 0.6596 | Rec: 0.8949 | F1: 0.7595
+
+=================== EPOCH 52/100 ===================
+Losses -> Train: 0.4168 | Val: 0.2758 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7188 | Rec: 0.8486 | F1: 0.7783
+Metrics (At 0.25 Threshold) -> Prec: 0.6697 | Rec: 0.8885 | F1: 0.7637
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 53/100 ===================
+Losses -> Train: 0.4023 | Val: 0.2852 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6911 | Rec: 0.8669 | F1: 0.7691
+Metrics (At 0.25 Threshold) -> Prec: 0.6460 | Rec: 0.8987 | F1: 0.7517
+
+=================== EPOCH 54/100 ===================
+Losses -> Train: 0.4052 | Val: 0.2811 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6996 | Rec: 0.8636 | F1: 0.7730
+Metrics (At 0.25 Threshold) -> Prec: 0.6560 | Rec: 0.8957 | F1: 0.7574
+
+=================== EPOCH 55/100 ===================
+Losses -> Train: 0.4362 | Val: 0.2797 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7246 | Rec: 0.8422 | F1: 0.7790
+Metrics (At 0.25 Threshold) -> Prec: 0.6765 | Rec: 0.8842 | F1: 0.7665
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 56/100 ===================
+Losses -> Train: 0.3913 | Val: 0.2824 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7044 | Rec: 0.8615 | F1: 0.7750
+Metrics (At 0.25 Threshold) -> Prec: 0.6586 | Rec: 0.8940 | F1: 0.7585
+
+=================== EPOCH 57/100 ===================
+Losses -> Train: 0.3984 | Val: 0.2819 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7023 | Rec: 0.8630 | F1: 0.7744
+Metrics (At 0.25 Threshold) -> Prec: 0.6563 | Rec: 0.8947 | F1: 0.7572
+
+=================== EPOCH 58/100 ===================
+Losses -> Train: 0.4005 | Val: 0.2765 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7023 | Rec: 0.8639 | F1: 0.7748
+Metrics (At 0.25 Threshold) -> Prec: 0.6532 | Rec: 0.8978 | F1: 0.7562
+
+=================== EPOCH 59/100 ===================
+Losses -> Train: 0.4541 | Val: 0.2876 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6737 | Rec: 0.8849 | F1: 0.7650
+Metrics (At 0.25 Threshold) -> Prec: 0.6274 | Rec: 0.9096 | F1: 0.7426
+
+=================== EPOCH 60/100 ===================
+Losses -> Train: 0.4243 | Val: 0.2753 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7029 | Rec: 0.8634 | F1: 0.7749
+Metrics (At 0.25 Threshold) -> Prec: 0.6557 | Rec: 0.8982 | F1: 0.7580
+
+=================== EPOCH 61/100 ===================
+Losses -> Train: 0.4142 | Val: 0.2761 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7060 | Rec: 0.8598 | F1: 0.7754
+Metrics (At 0.25 Threshold) -> Prec: 0.6549 | Rec: 0.8986 | F1: 0.7576
+
+=================== EPOCH 62/100 ===================
+Losses -> Train: 0.3591 | Val: 0.2867 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6896 | Rec: 0.8717 | F1: 0.7700
+Metrics (At 0.25 Threshold) -> Prec: 0.6454 | Rec: 0.9019 | F1: 0.7524
+
+=================== EPOCH 63/100 ===================
+Losses -> Train: 0.3925 | Val: 0.2840 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6934 | Rec: 0.8703 | F1: 0.7718
+Metrics (At 0.25 Threshold) -> Prec: 0.6502 | Rec: 0.8999 | F1: 0.7549
+
+=================== EPOCH 64/100 ===================
+Losses -> Train: 0.3852 | Val: 0.2796 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7109 | Rec: 0.8525 | F1: 0.7753
+Metrics (At 0.25 Threshold) -> Prec: 0.6666 | Rec: 0.8892 | F1: 0.7620
+
+=================== EPOCH 65/100 ===================
+Losses -> Train: 0.3638 | Val: 0.2816 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7168 | Rec: 0.8466 | F1: 0.7763
+Metrics (At 0.25 Threshold) -> Prec: 0.6759 | Rec: 0.8844 | F1: 0.7662
+
+=================== EPOCH 66/100 ===================
+Losses -> Train: 0.3960 | Val: 0.2698 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7160 | Rec: 0.8592 | F1: 0.7811
+Metrics (At 0.25 Threshold) -> Prec: 0.6698 | Rec: 0.8917 | F1: 0.7650
+
+=================== EPOCH 67/100 ===================
+Losses -> Train: 0.3821 | Val: 0.2643 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7181 | Rec: 0.8621 | F1: 0.7836
+Metrics (At 0.25 Threshold) -> Prec: 0.6716 | Rec: 0.8923 | F1: 0.7664
+
+=================== EPOCH 68/100 ===================
+Losses -> Train: 0.3751 | Val: 0.2753 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7102 | Rec: 0.8664 | F1: 0.7806
+Metrics (At 0.25 Threshold) -> Prec: 0.6628 | Rec: 0.8958 | F1: 0.7619
+
+=================== EPOCH 69/100 ===================
+Losses -> Train: 0.3858 | Val: 0.2765 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7036 | Rec: 0.8691 | F1: 0.7776
+Metrics (At 0.25 Threshold) -> Prec: 0.6570 | Rec: 0.8972 | F1: 0.7586
+
+=================== EPOCH 70/100 ===================
+Losses -> Train: 0.3800 | Val: 0.2615 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7276 | Rec: 0.8563 | F1: 0.7867
+Metrics (At 0.25 Threshold) -> Prec: 0.6769 | Rec: 0.8906 | F1: 0.7692
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 71/100 ===================
+Losses -> Train: 0.3865 | Val: 0.2685 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7027 | Rec: 0.8714 | F1: 0.7780
+Metrics (At 0.25 Threshold) -> Prec: 0.6566 | Rec: 0.8970 | F1: 0.7582
+
+=================== EPOCH 72/100 ===================
+Losses -> Train: 0.3771 | Val: 0.2777 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6847 | Rec: 0.8828 | F1: 0.7712
+Metrics (At 0.25 Threshold) -> Prec: 0.6419 | Rec: 0.9044 | F1: 0.7508
+
+=================== EPOCH 73/100 ===================
+Losses -> Train: 0.3601 | Val: 0.2696 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7099 | Rec: 0.8677 | F1: 0.7809
+Metrics (At 0.25 Threshold) -> Prec: 0.6580 | Rec: 0.8973 | F1: 0.7592
+
+=================== EPOCH 74/100 ===================
+Losses -> Train: 0.3929 | Val: 0.2601 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7103 | Rec: 0.8723 | F1: 0.7830
+Metrics (At 0.25 Threshold) -> Prec: 0.6596 | Rec: 0.8996 | F1: 0.7611
+
+=================== EPOCH 75/100 ===================
+Losses -> Train: 0.3992 | Val: 0.2597 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7189 | Rec: 0.8662 | F1: 0.7857
+Metrics (At 0.25 Threshold) -> Prec: 0.6695 | Rec: 0.8949 | F1: 0.7659
+
+=================== EPOCH 76/100 ===================
+Losses -> Train: 0.4082 | Val: 0.2663 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7079 | Rec: 0.8719 | F1: 0.7814
+Metrics (At 0.25 Threshold) -> Prec: 0.6645 | Rec: 0.8960 | F1: 0.7631
+
+=================== EPOCH 77/100 ===================
+Losses -> Train: 0.3922 | Val: 0.2677 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7117 | Rec: 0.8678 | F1: 0.7820
+Metrics (At 0.25 Threshold) -> Prec: 0.6674 | Rec: 0.8954 | F1: 0.7648
+
+=================== EPOCH 78/100 ===================
+Losses -> Train: 0.4069 | Val: 0.2798 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.6905 | Rec: 0.8809 | F1: 0.7741
+Metrics (At 0.25 Threshold) -> Prec: 0.6492 | Rec: 0.9022 | F1: 0.7550
+
+=================== EPOCH 79/100 ===================
+Losses -> Train: 0.3782 | Val: 0.2693 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7204 | Rec: 0.8610 | F1: 0.7844
+Metrics (At 0.25 Threshold) -> Prec: 0.6753 | Rec: 0.8909 | F1: 0.7682
+
+=================== EPOCH 80/100 ===================
+Losses -> Train: 0.3882 | Val: 0.2669 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7150 | Rec: 0.8665 | F1: 0.7835
+Metrics (At 0.25 Threshold) -> Prec: 0.6704 | Rec: 0.8950 | F1: 0.7666
+
+=================== EPOCH 81/100 ===================
+Losses -> Train: 0.3772 | Val: 0.2649 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7158 | Rec: 0.8647 | F1: 0.7832
+Metrics (At 0.25 Threshold) -> Prec: 0.6679 | Rec: 0.8950 | F1: 0.7649
+
+=================== EPOCH 82/100 ===================
+Losses -> Train: 0.3616 | Val: 0.2591 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7221 | Rec: 0.8619 | F1: 0.7858
+Metrics (At 0.25 Threshold) -> Prec: 0.6707 | Rec: 0.8945 | F1: 0.7666
+
+=================== EPOCH 83/100 ===================
+Losses -> Train: 0.4033 | Val: 0.2523 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7341 | Rec: 0.8551 | F1: 0.7900
+Metrics (At 0.25 Threshold) -> Prec: 0.6827 | Rec: 0.8893 | F1: 0.7724
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 84/100 ===================
+Losses -> Train: 0.3775 | Val: 0.2615 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7162 | Rec: 0.8701 | F1: 0.7857
+Metrics (At 0.25 Threshold) -> Prec: 0.6679 | Rec: 0.8984 | F1: 0.7662
+
+=================== EPOCH 85/100 ===================
+Losses -> Train: 0.3899 | Val: 0.2682 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7062 | Rec: 0.8750 | F1: 0.7816
+Metrics (At 0.25 Threshold) -> Prec: 0.6615 | Rec: 0.8998 | F1: 0.7625
+
+=================== EPOCH 86/100 ===================
+Losses -> Train: 0.3922 | Val: 0.2668 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7055 | Rec: 0.8719 | F1: 0.7799
+Metrics (At 0.25 Threshold) -> Prec: 0.6594 | Rec: 0.8995 | F1: 0.7609
+
+=================== EPOCH 87/100 ===================
+Losses -> Train: 0.3813 | Val: 0.2597 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7237 | Rec: 0.8607 | F1: 0.7863
+Metrics (At 0.25 Threshold) -> Prec: 0.6785 | Rec: 0.8914 | F1: 0.7705
+
+=================== EPOCH 88/100 ===================
+Losses -> Train: 0.3766 | Val: 0.2578 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7234 | Rec: 0.8631 | F1: 0.7871
+Metrics (At 0.25 Threshold) -> Prec: 0.6766 | Rec: 0.8913 | F1: 0.7692
+
+=================== EPOCH 89/100 ===================
+Losses -> Train: 0.3680 | Val: 0.2659 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7206 | Rec: 0.8663 | F1: 0.7867
+Metrics (At 0.25 Threshold) -> Prec: 0.6788 | Rec: 0.8908 | F1: 0.7705
+
+=================== EPOCH 90/100 ===================
+Losses -> Train: 0.3484 | Val: 0.2496 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7563 | Rec: 0.8412 | F1: 0.7965
+Metrics (At 0.25 Threshold) -> Prec: 0.7052 | Rec: 0.8797 | F1: 0.7828
+ => Saved new optimum sensitive checkpoint.
+
+=================== EPOCH 91/100 ===================
+Losses -> Train: 0.3637 | Val: 0.2577 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7465 | Rec: 0.8498 | F1: 0.7948
+Metrics (At 0.25 Threshold) -> Prec: 0.7022 | Rec: 0.8820 | F1: 0.7819
+
+=================== EPOCH 92/100 ===================
+Losses -> Train: 0.3749 | Val: 0.2632 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7142 | Rec: 0.8729 | F1: 0.7856
+Metrics (At 0.25 Threshold) -> Prec: 0.6727 | Rec: 0.8956 | F1: 0.7683
+
+=================== EPOCH 93/100 ===================
+Losses -> Train: 0.3629 | Val: 0.2551 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7271 | Rec: 0.8649 | F1: 0.7900
+Metrics (At 0.25 Threshold) -> Prec: 0.6841 | Rec: 0.8914 | F1: 0.7741
+
+=================== EPOCH 94/100 ===================
+Losses -> Train: 0.3790 | Val: 0.2533 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7427 | Rec: 0.8483 | F1: 0.7920
+Metrics (At 0.25 Threshold) -> Prec: 0.7028 | Rec: 0.8800 | F1: 0.7814
+
+=================== EPOCH 95/100 ===================
+Losses -> Train: 0.3710 | Val: 0.2552 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7269 | Rec: 0.8623 | F1: 0.7888
+Metrics (At 0.25 Threshold) -> Prec: 0.6858 | Rec: 0.8890 | F1: 0.7743
+
+=================== EPOCH 96/100 ===================
+Losses -> Train: 0.3868 | Val: 0.2548 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7409 | Rec: 0.8481 | F1: 0.7909
+Metrics (At 0.25 Threshold) -> Prec: 0.7019 | Rec: 0.8813 | F1: 0.7815
+
+=================== EPOCH 97/100 ===================
+Losses -> Train: 0.3797 | Val: 0.2627 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7120 | Rec: 0.8727 | F1: 0.7842
+Metrics (At 0.25 Threshold) -> Prec: 0.6712 | Rec: 0.8970 | F1: 0.7678
+
+=================== EPOCH 98/100 ===================
+Losses -> Train: 0.3568 | Val: 0.2607 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7087 | Rec: 0.8757 | F1: 0.7834
+Metrics (At 0.25 Threshold) -> Prec: 0.6682 | Rec: 0.8987 | F1: 0.7665
+
+=================== EPOCH 99/100 ===================
+Losses -> Train: 0.3995 | Val: 0.2574 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7289 | Rec: 0.8617 | F1: 0.7898
+Metrics (At 0.25 Threshold) -> Prec: 0.6887 | Rec: 0.8897 | F1: 0.7764
+
+=================== EPOCH 100/100 ===================
+Losses -> Train: 0.3744 | Val: 0.2494 | LR: 0.0000100
+Metrics (At 0.50 Threshold) -> Prec: 0.7398 | Rec: 0.8548 | F1: 0.7932
+Metrics (At 0.25 Threshold) -> Prec: 0.6984 | Rec: 0.8856 | F1: 0.7809
