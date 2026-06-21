@@ -29,7 +29,7 @@ Peregrine/                          <--- DATABASE_BASE_DIR
 ├── Peregrine Dataset v2025-09 /   
 ```
 
-3. Download the model weights from [here]
+3. Download the model weights from [here], and place in `models/UNet/checkpoints/`.
 
 ### Configuration Setup
 Configure the parameters of the repository, found within the `configs/config.py` file, such as:
