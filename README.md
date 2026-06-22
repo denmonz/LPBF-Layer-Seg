@@ -27,8 +27,7 @@ The following is a break-down of my system configuration:
 Peregrine/                          <--- DATABASE_BASE_DIR
 ├── Peregrine Dataset v2021-03/
 ├── Peregrine Dataset v2022-10.1/
-├── Peregrine Dataset v2025-09/
-└── Unified_Unet_Dataset/           <--- Automatically created
+└──  Peregrine Dataset v2025-09/
 ```
 
 3. Download the model weights from [here](https://drive.google.com/file/d/17xhW3pY4uy11T1TmpjUAEKypmIpVh1mn/view?usp=sharing), and place in `models/UNet/checkpoints/`.
@@ -52,14 +51,15 @@ To train your own model on the data, run the following:
 `uv run python train.py`
 
 ### Testing
-To test on the held-out testing data using the trained model, run the following: 
+To test on the held-out testing data using the trained model:
+1. Set the TEST_DATA_DIR parameter in config.py to point to `test/AddUp_FormUp_350_Maraging_Steel`, `test/EOS_M290_Inconel_718_2`, or `test/Concept_Laser_M2_Builds`
 
 `uv run python test_suite_analysis.py`
 
 ### Inference
 To conduct inference on your own data using the trained model, run the following: 
 
-`uv run python inference.py`
+`uv run python inference.py <PATH_TO_IMAGE>`
 
 ## Overview and Analysis Files
 For more metadata information, review the following write-ups:

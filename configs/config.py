@@ -21,17 +21,18 @@ The following dataset structure is necessary to configure manually:
         Peregrine Dataset v2025-09 /
 """
 BINARY_CLASSIFICATION = True # Binary ['no_defect', 'defect'] if True, or multi-class if False
-DATASET_BASE_DIR = "D:/Data/Peregrine"
+DATASET_BASE_DIR = "" # Path to root Peregrine/ folder
 UNET_DATASET_DIR = f"{DATASET_BASE_DIR}/Unified_Unet_Dataset"
 
 # File Paths
 CHECKPOINT_DIR = "./models/UNet/checkpoints"
-CHECKPOINT_FILE = f"{CHECKPOINT_DIR}/best_unetplusplus_efficientnet-b3.pth"
+CHECKPOINT_FILE = f"{CHECKPOINT_DIR}/Best_100_epochs/best_unetplusplus_efficientnet-b3.pth"
 
 # Test & Inference Parameters
-TEST_IMAGE_DIR = f"{UNET_DATASET_DIR}/test"
-OUTPUT_DIR = f"{UNET_DATASET_DIR}/output"
-ANALYSIS_REPORT = f"{UNET_DATASET_DIR}/analysis_report"
-OPTIMAL_THRESHOLD = 0.50
+TEST_DATA_DIR = "" # Path to test/ subfolder (used in test_suite_analysis.py)
+INFERENCE_DATA_PATH = "" # Path to a single image (used in inference.py)
+OUTPUT_DIR = f"{TEST_DATA_DIR}/output"
+ANALYSIS_REPORT = f"{TEST_DATA_DIR}/analysis_report"
+OPTIMAL_THRESHOLD = 0.25
 MIN_DEFECT_PIXEL_SIZE = 3  # Noise suppression floor filter
 PIXEL_SCALE_UM = 2.5  # Metrology conversion factor
