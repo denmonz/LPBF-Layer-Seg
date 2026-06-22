@@ -2,7 +2,7 @@
 The data used for model training, validation, and testing are the Laser Powder Bed Fusion builds within the three datasets. 
 I utilized the visible imagery ('0'), which are single-channel .tif images. The annotations generated are .png files, where 
 each pixel represents the class associated with that pixel (for binary data, 0 = background / no defect, and 1 = defect, 
-for multiclass data, 0 = background / no defect, and >0 is the actual class value [1-18]).
+for multiclass data, 0 = background / no defect, and >0 is the actual class value [1-17]).
 
 ## Classes
 | Class Id | Class Name             |
