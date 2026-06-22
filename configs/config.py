@@ -26,7 +26,7 @@ UNET_DATASET_DIR = f"{DATASET_BASE_DIR}/Unified_Unet_Dataset"
 
 # File Paths
 CHECKPOINT_DIR = "./models/UNet/checkpoints"
-CHECKPOINT_FILE = f"{CHECKPOINT_DIR}/Best_100_epochs/best_unetplusplus_efficientnet-b3.pth"
+CHECKPOINT_FILE = f"{CHECKPOINT_DIR}/best_unetplusplus_efficientnet-b3.pth"
 
 # Test & Inference Parameters
 TEST_DATA_DIR = "" # Path to test/ subfolder (used in test_suite_analysis.py)
