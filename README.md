@@ -29,7 +29,7 @@ The following is a break-down of my system configuration:
 Peregrine/                          <--- DATABASE_BASE_DIR
 ├── Peregrine Dataset v2021-03/
 ├── Peregrine Dataset v2022-10.1/
-└──  Peregrine Dataset v2025-09/
+└── Peregrine Dataset v2025-09/
 ```
 
 3. Download the model weights from [here](https://drive.google.com/file/d/17xhW3pY4uy11T1TmpjUAEKypmIpVh1mn/view?usp=sharing), and place in `models/UNet/checkpoints/`.
