@@ -1,0 +1,39 @@
+[project]
+name = "lpbf-layer-seg"
+version = "0.1.0"
+description = "Laser Powder Bed Fusion Segmentation Python Library Requirements"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "h5py>=3.16.0",
+    "matplotlib>=3.11.0",
+    "numpy>=2.4.4",
+    "opencv-python>=4.13.0.92",
+    "pandas>=3.0.3",
+    "scikit-learn>=1.9.0",
+    "scikit-multilearn-ng>=0.0.8",
+    "scipy>=1.17.1",
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "albumentationsx>=2.3.1",
+    "segmentation-models-pytorch>=0.5.0",
+    "openpyxl>=3.1.5",
+    "tifffile>=2026.6.1",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu126", marker = "sys_platform == 'win32'" }
+]
+torchvision = [
+  { index = "pytorch-cu126", marker = "sys_platform == 'win32'" }
+]
+torchaudio = [
+  { index = "pytorch-cu126", marker = "sys_platform == 'win32'" }
+]
