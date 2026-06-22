@@ -136,7 +136,7 @@ def build_partitioned_unet_dataset(dataset_configs, unet_output_dir, binary=True
     test_groups = ["Maraging_Steel", "Inconel_718_2"]
 
     # Create target folder structural tree
-    for split in ["train", "val", "test"]:
+    for split in ["train", "val"]:
         (unet_root / split / "images").mkdir(parents=True, exist_ok=True)
         (unet_root / split / "masks").mkdir(parents=True, exist_ok=True)
 
@@ -211,15 +211,16 @@ def build_partitioned_unet_dataset(dataset_configs, unet_output_dir, binary=True
 
             # 2. Determine Split Bucket assignment
             if material_name in test_groups:
-                target_split = "test"
-                file_assignments = [(f, "test") for f in npy_files]
                 print(f"Routing {prefix} ({total_files} slices) -> HELD OUT FOR TEST BENCH")
+                # Create a dedicated path structure: test / printer_material
+                test_subdir = Path("test") / f"{printer_name}_{material_name}"
+                file_assignments = [(f, test_subdir) for f in npy_files]
             else:
                 # Dynamically split remaining materials 80% train / 20% val by layer slice index
                 split_idx = int(0.8 * total_files)
+                print(f"Routing {prefix} -> Distributed into: {split_idx} Train | {total_files - split_idx} Val")
                 file_assignments = [(f, "train") for f in npy_files[:split_idx]] + \
                                    [(f, "val") for f in npy_files[split_idx:]]
-                print(f"Routing {prefix} -> Distributed into: {split_idx} Train | {total_files - split_idx} Val")
 
             # 3. Convert masks and distribute files
             for npy_path, split_name in file_assignments:
@@ -232,6 +233,9 @@ def build_partitioned_unet_dataset(dataset_configs, unet_output_dir, binary=True
 
                 dest_mask = unet_root / split_name / "masks" / f"{unique_name}.png"
                 dest_image = unet_root / split_name / "images" / f"{unique_name}.tif"
+
+                dest_mask.parent.mkdir(parents=True, exist_ok=True)
+                dest_image.parent.mkdir(parents=True, exist_ok=True)
 
                 # Execute metadata standardization logic and matrix write transformations
                 standardized_instance_counts, binary_instance_counts = mask_to_unet_segmentation(npy_path, dest_mask, binary, visualize)
