@@ -31,7 +31,7 @@ Peregrine/                          <--- DATABASE_BASE_DIR
 └── Unified_Unet_Dataset/           <--- Automatically created
 ```
 
-3. Download the model weights from [here], and place in `models/UNet/checkpoints/`.
+3. Download the model weights from [here](https://drive.google.com/file/d/17xhW3pY4uy11T1TmpjUAEKypmIpVh1mn/view?usp=sharing), and place in `models/UNet/checkpoints/`.
 
 ### Configuration Setup
 Configure the parameters of the repository, found within the `configs/config.py` file, such as:
@@ -74,3 +74,4 @@ In future iterations, I plan to develop the following capabilities and features:
   - [ ] TensorRT
 - [ ] Compare performance metrics against larger pre-trained EfficientNet Encoders
 - [ ] Quantify epistemic uncertainty (model confidence) by integrating Mote Carlo (MC) dropout as a toggle for testing and inference
+- [ ] Conduct multi-class classification, and compare performance against binary classification
