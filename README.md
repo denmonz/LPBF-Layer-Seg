@@ -1,6 +1,8 @@
 # PBF-Layer-Seg
 **Laser Powder Bed Fusion Layer Instance Segmentation for Anomaly / Defect Identification**
 
+![Best Performing Layer](repo_image.png)
+
 ## Requirements
 - [Python v3.12.10](https://www.python.org/downloads/release/python-31210/)
 - [uv Python Package Manager](https://docs.astral.sh/uv/)
