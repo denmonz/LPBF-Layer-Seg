@@ -56,7 +56,9 @@ To train your own model on the data, run the following:
 To test on the held-out testing data using the trained model:
 1. Set the TEST_DATA_DIR parameter in config.py to point to `test/AddUp_FormUp_350_Maraging_Steel`, `test/EOS_M290_Inconel_718_2`, or `test/Concept_Laser_M2_Builds`
 
-`uv run python test_suite_analysis.py`
+2. Run the following command:
+
+    `uv run python test_suite_analysis.py`
 
 ### Inference
 To conduct inference on your own data using the trained model, run the following: 
