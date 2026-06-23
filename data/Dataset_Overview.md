@@ -5,30 +5,45 @@ each pixel represents the class associated with that pixel (for binary data, 0 =
 for multiclass data, 0 = background / no defect, and >0 is the actual class value [1-17]).
 
 ## Classes
-| Class Id | Class Name             |
-|:---------|:-----------------------|
-| 0        | Unlabeled              |
-| 0        | Powder                 |
-| 0        | Printed Mesh           |
-| 0        | Misprint               |
-| 1        | Recoaster Hopping      |
-| 2        | Recoater Streaking     |
-| 3        | Incomplete Spreading   |
-| 4        | Edge Swelling          |
-| 5        | Debris                 |
-| 6        | Super Elevation        |
-| 7        | Soot                   |
-| 8        | Excessive Melting      |
-| 8        | Over Melting           |
-| 9        | Spatter                |
-| 10       | Localized Bright Spot  |
-| 11       | Localized Dark Region  |
-| 12       | Stripe Boundary        |
-| 13       | Under Melting          |
-| 14       | Recoater Flicking      |
-| 15       | Disturbed Powder       |
-| 16       | Recoater Strike Damage |
-| 17       | Condensate             |
+| Class Id | Class Name               | Number of Instances |
+|:---------|:-------------------------|---------------------|
+| 0        | Unlabeled                | 372                 |
+| 0        | Powder                   | 23,353              |
+| 0        | Printed                  | 17,148              |
+| 0        | Misprint                 | 2,189               |
+| 1        | Recoaster Hopping        | 11,652              |
+| 2        | Recoater Streaking       | 849                 |
+| 3        | Incomplete Spreading     | 155                 |
+| 4        | Edge Swelling            | 95,449              |
+| 5        | Debris                   | 4,782               |
+| 6        | Super Elevation          | 4,482               |
+| 7        | Soot                     | 37,768              |
+| 8        | Excessive / Over Melting | 11,097              |
+| 9        | Spatter                  | 48,807              |
+| 10       | Localized Bright Spot    | 4,275               |
+| 11       | Localized Dark Region    | 0                   |
+| 12       | Stripe Boundary          | 9,682               |
+| 13       | Under Melting            | 1,488               |
+| 14       | Recoater Flicking        | 15,795              |
+| 15       | Disturbed Powder         | 4,971               |
+| 16       | Recoater Strike Damage   | 2,367               |
+| 17       | Condensate               | 12,960              |
+
+### Class Distribution Notes
+- The **most** represented classes are:
+   1. Edge Swelling (95,4949)
+   2. Spatter (48,807)
+   3. Soot (37,768)
+
+
+- The **least** represented classes are (not including 'Unlabeled'):
+   1. Incomplete Spreading (155)
+   2. Recoater Streaking (849)
+   3. Under Melting (1,488)
+
+
+- 'Localized Dark Region' is not contained within the subset of the data
+
 
 ## Peregrine Dataset v2021-03
 ### Builds
