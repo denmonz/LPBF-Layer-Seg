@@ -38,7 +38,7 @@ Testing was performed on the following completely unseen data (186 images total)
 
    Heavily suppresses false positive and recovers false negatives without requiring weight retraining. TTA runs the full-scale slice through the network 4 separate times under different geometric flips, and then averages the probability outputs.
 
-### AddUp FormUp 350 > Maraging Steel @ Threshold=0.05
+### AddUp FormUp 350 > Maraging Steel @ Threshold=0.05 (Cross-Material Generalization Study)
 ![AddUp FormUp 350 Maraging Steel Performance Summary](test_performance_reports/AddUp_FormUp_250_Maraging_Steel/test_suite_performance_curves.png)
 ![AddUp FormUp 350 Maraging Steel Performance Visualization](test_performance_reports/AddUp_FormUp_250_Maraging_Steel/test_suite_layer_gallery.png)
 
@@ -49,7 +49,7 @@ Dataset Global Metrics (Micro-Averaged):
 - Recall: 0.4071
 - F1-Dice: 0.5459
 
-### EOS M290 > Inconel 718 (2) @ Threshold=0.25
+### EOS M290 > Inconel 718 (2) @ Threshold=0.25 (Cross-Domain Transferability Study)
 ![EOS M290 Inconel 718 (2) Performance Summary](test_performance_reports/EOS_M290_Inconel_718_2/test_suite_performance_curves.png)
 ![EOS M290 Inconel 718 (2) Performance Visualization](test_performance_reports/EOS_M290_Inconel_718_2/test_suite_layer_gallery.png)
 
@@ -60,7 +60,7 @@ Dataset Global Metrics (Micro-Averaged):
 - Recall: 0.3109
 - F1-Dice: 0.0917
 
-### Peregrine Dataset v2025-09 @ Threshold=0.25
+### Peregrine Dataset v2025-09 @ Threshold=0.25 (In-Domain Study)
 ![Concept Laser M2 Builds Performance Summary](test_performance_reports/Concept_Laser_M2_Builds/test_suite_performance_curves.png)
 ![Concept Laser M2 Builds Performance Visualization](test_performance_reports/Concept_Laser_M2_Builds/test_suite_layer_gallery.png)
 
