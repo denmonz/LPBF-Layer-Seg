@@ -31,17 +31,17 @@ for multiclass data, 0 = background / no defect, and >0 is the actual class valu
 | 18       | Dropped NIR Data         | 0                          | -                 |
 
 ### Class Distribution Notes
-- The **most** represented classes (by pixel percentage) are:
-   1. Powder (82.89%)
-   2. Condensate (7.89%)
-   3. Printed (7.39%)
-   4. Incomplete Spreading (0.40%)
-   5. Excessive / Over Melting (0.33%)
+- The **most** represented defect classes (by pixel percentage) are:
+   1. Condensate (7.89%)
+   2. Incomplete Spreading (0.40%)
+   3. Excessive / Over Melting (0.33%)
+   4. Recoater Streaking (0.26%)
+   5. Disturbed Powder (0.24%)
 
 
-- The **least** represented classes (by pixel percentage) are:
-   1. Spatter (0.02%)
-   2. Misprint (0.01%)
+- The **least** represented defect classes (by pixel percentage) are:
+   1. Edge Swelling (0.04%)
+   2. Spatter (0.02%)
    3. Debris (0.01%)
    4. Localized Bright Spot (0.00%)
    5. Recoater Strike Damage (0.00%)
